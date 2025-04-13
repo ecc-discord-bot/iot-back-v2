@@ -51,7 +51,7 @@
 
 /* ボタン */
 .btn {
-  width: 180px;
+  min-width: 180px;
   font-weight: bold;
   padding: 0.8rem 1rem;
   border: none;
