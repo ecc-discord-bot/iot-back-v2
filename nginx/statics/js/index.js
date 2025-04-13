@@ -95,7 +95,7 @@ const viewTermsButton = document.getElementById("view-terms-button");
 
 async function InitUI(isAgreed) {
     // リンクを取得
-    const discordLink = auth.Get("/app/invite", {});
+    const discordLink = await auth.Get("/app/invite", {});
 
     // UI
     setupUI(postStudentInfo,isAgreed,discordLink["url"]);
