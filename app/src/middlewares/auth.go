@@ -27,6 +27,8 @@ func RequireAuth(next echo.HandlerFunc) echo.HandlerFunc {
 
 		// contextにトークンを格納
 		ctx.Set("claim", claim)
+		// トークンを格納
+		ctx.Set("token", token)
 
 		// 認証処理
 		return next(ctx)

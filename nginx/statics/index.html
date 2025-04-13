@@ -1,14 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
-</head>
-<body>
-    <h1>hello world</h1>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECC IoT部 入部</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div id="perspective-container" class="perspective">
+      <div id="card" class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 1.5rem">IoT部 ログイン</h2>
+            <button id="loginButton1" class="btn btn-blue" style="margin-bottom: 1rem">1. Discord でログイン</button>
+            <button id="loginButton2" class="btn btn-green btn-disabled" style="margin-bottom: 1.4rem">2. Microsoft でログイン</button>
+            <button id="view-terms-button" class="btn-link btn-disabled" disabled>3. 規約を確認する</button>
+          </div>
+          <div class="card-back">
+            <div id="terms-scroll-container">
+              <div id="agree-list">
+                <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem; text-align: center">利用規約</h3>
+                <p style="font-size: 0.8rem; color: #6b7280">規約を読み込んでいます...</p>
+              </div>
+            </div>
+            <div style="width: 100%">
+              <button id="confirm-terms-button" class="btn btn-blue btn-disabled" disabled>確認して同意する</button>
+            </div>
+          </div>
+        </div>
+        <div id="loadingOverlay" class="loading-overlay">
+          <div class="spinner"></div>
+          <span class="text-gray" style="font-weight: 500">処理中...</span>
+        </div>
+      </div>
+    </div>
 
     <script src="./authkit/authkit.js"></script>
-    <script src="./scripts/main.js"></script>
-</body>
+    <script type="module" src="./js/index.js"></script>
+  </body>
 </html>

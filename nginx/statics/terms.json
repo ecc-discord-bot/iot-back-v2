@@ -1,0 +1,1809 @@
+[
+  {
+    "id": "1d21bfa1-efd7-808a-87bb-edc096581d37",
+    "properties": {
+      "day": {
+        "id": "%3A%3BXE",
+        "type": "date",
+        "date": {
+          "start": "2025-04-11",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "title": {
+        "id": "%3AB~X",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "名誉の保持",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "名誉の保持",
+            "href": null
+          }
+        ]
+      },
+      "status": {
+        "id": "qG%3F%3E",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "8838b773-09a0-40fd-86cc-dcf6d0e1607e",
+            "name": "now",
+            "color": "green"
+          }
+        ]
+      },
+      "number": {
+        "id": "title",
+        "type": "title",
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "第1条",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "第1条",
+            "href": null
+          }
+        ]
+      }
+    },
+    "content": [
+      {
+        "object": "block",
+        "id": "1d21bfa1-efd7-8001-87a9-f3857507fd23",
+        "parent": {
+          "type": "page_id",
+          "page_id": "1d21bfa1-efd7-808a-87bb-edc096581d37"
+        },
+        "created_time": "2025-04-11T09:04:00.000Z",
+        "last_edited_time": "2025-04-11T09:04:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "has_children": false,
+        "archived": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "他者に対してIoT部の名誉を損なう行為をしてはならない。",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "他者に対してIoT部の名誉を損なう行為をしてはならない。",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      }
+    ]
+  },
+  {
+    "id": "1d21bfa1-efd7-800f-bc0c-ed7a4737ffce",
+    "properties": {
+      "day": {
+        "id": "%3A%3BXE",
+        "type": "date",
+        "date": {
+          "start": "2025-04-11",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "title": {
+        "id": "%3AB~X",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "学業の優先",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "学業の優先",
+            "href": null
+          }
+        ]
+      },
+      "status": {
+        "id": "qG%3F%3E",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "8838b773-09a0-40fd-86cc-dcf6d0e1607e",
+            "name": "now",
+            "color": "green"
+          }
+        ]
+      },
+      "number": {
+        "id": "title",
+        "type": "title",
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "第2条",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "第2条",
+            "href": null
+          }
+        ]
+      }
+    },
+    "content": [
+      {
+        "object": "block",
+        "id": "1d21bfa1-efd7-80af-927a-e0880d80a6f9",
+        "parent": {
+          "type": "page_id",
+          "page_id": "1d21bfa1-efd7-800f-bc0c-ed7a4737ffce"
+        },
+        "created_time": "2025-04-11T09:03:00.000Z",
+        "last_edited_time": "2025-04-11T09:03:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "has_children": false,
+        "archived": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "授業の総合出席率を80%以上維持し、進級・卒業単位を確保すること。達成できていない学生は顧問の個人面談のもと、指導及び退部措置を行う。",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "授業の総合出席率を80%以上維持し、進級・卒業単位を確保すること。達成できていない学生は顧問の個人面談のもと、指導及び退部措置を行う。",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      }
+    ]
+  },
+  {
+    "id": "1d21bfa1-efd7-806b-8d45-c81ed0b5a265",
+    "properties": {
+      "day": {
+        "id": "%3A%3BXE",
+        "type": "date",
+        "date": {
+          "start": "2025-04-11",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "title": {
+        "id": "%3AB~X",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "IoT Laboについて",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "IoT Laboについて",
+            "href": null
+          }
+        ]
+      },
+      "status": {
+        "id": "qG%3F%3E",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "8838b773-09a0-40fd-86cc-dcf6d0e1607e",
+            "name": "now",
+            "color": "green"
+          }
+        ]
+      },
+      "number": {
+        "id": "title",
+        "type": "title",
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "第3条",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "第3条",
+            "href": null
+          }
+        ]
+      }
+    },
+    "content": [
+      {
+        "object": "block",
+        "id": "1d21bfa1-efd7-8021-a512-f44c1ca08d4f",
+        "parent": {
+          "type": "page_id",
+          "page_id": "1d21bfa1-efd7-806b-8d45-c81ed0b5a265"
+        },
+        "created_time": "2025-04-11T09:03:00.000Z",
+        "last_edited_time": "2025-04-11T09:03:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "has_children": true,
+        "archived": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "IoT Labo（3501-3502教室）は授業時間外に「IoT部が活動する」名目で顧問が予約をしている。",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "IoT Labo（3501-3502教室）は授業時間外に「IoT部が活動する」名目で顧問が予約をしている。",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "children": [
+          {
+            "object": "block",
+            "id": "1d21bfa1-efd7-8099-9623-ca82c29b9db5",
+            "parent": {
+              "type": "block_id",
+              "block_id": "1d21bfa1-efd7-8021-a512-f44c1ca08d4f"
+            },
+            "created_time": "2025-04-11T09:03:00.000Z",
+            "last_edited_time": "2025-04-11T09:03:00.000Z",
+            "created_by": {
+              "object": "user",
+              "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+            },
+            "last_edited_by": {
+              "object": "user",
+              "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+            },
+            "has_children": false,
+            "archived": false,
+            "in_trash": false,
+            "type": "paragraph",
+            "paragraph": {
+              "rich_text": [
+                {
+                  "type": "text",
+                  "text": {
+                    "content": "よって、IoT部員であれば授業時間外でも使用することが可能となる。",
+                    "link": null
+                  },
+                  "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                  },
+                  "plain_text": "よって、IoT部員であれば授業時間外でも使用することが可能となる。",
+                  "href": null
+                }
+              ],
+              "color": "default"
+            }
+          },
+          {
+            "object": "block",
+            "id": "1d21bfa1-efd7-80e5-a959-f350e950e272",
+            "parent": {
+              "type": "block_id",
+              "block_id": "1d21bfa1-efd7-8021-a512-f44c1ca08d4f"
+            },
+            "created_time": "2025-04-11T09:03:00.000Z",
+            "last_edited_time": "2025-04-11T09:03:00.000Z",
+            "created_by": {
+              "object": "user",
+              "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+            },
+            "last_edited_by": {
+              "object": "user",
+              "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+            },
+            "has_children": false,
+            "archived": false,
+            "in_trash": false,
+            "type": "paragraph",
+            "paragraph": {
+              "rich_text": [
+                {
+                  "type": "text",
+                  "text": {
+                    "content": "※学内イベントで使用する場合を除く",
+                    "link": null
+                  },
+                  "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                  },
+                  "plain_text": "※学内イベントで使用する場合を除く",
+                  "href": null
+                }
+              ],
+              "color": "default"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "1d21bfa1-efd7-8032-9ca4-c78c0c032fe9",
+    "properties": {
+      "day": {
+        "id": "%3A%3BXE",
+        "type": "date",
+        "date": {
+          "start": "2025-04-11",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "title": {
+        "id": "%3AB~X",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "備品について",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "備品について",
+            "href": null
+          }
+        ]
+      },
+      "status": {
+        "id": "qG%3F%3E",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "8838b773-09a0-40fd-86cc-dcf6d0e1607e",
+            "name": "now",
+            "color": "green"
+          }
+        ]
+      },
+      "number": {
+        "id": "title",
+        "type": "title",
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "第4条",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "第4条",
+            "href": null
+          }
+        ]
+      }
+    },
+    "content": [
+      {
+        "object": "block",
+        "id": "1d21bfa1-efd7-8065-aee9-cb5e00ab679f",
+        "parent": {
+          "type": "page_id",
+          "page_id": "1d21bfa1-efd7-8032-9ca4-c78c0c032fe9"
+        },
+        "created_time": "2025-04-11T09:03:00.000Z",
+        "last_edited_time": "2025-04-11T09:03:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "has_children": false,
+        "archived": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "IoTラボに配置してある備品は使用後、所定の位置に戻し原状復帰をしなければならない。",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "IoTラボに配置してある備品は使用後、所定の位置に戻し原状復帰をしなければならない。",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "object": "block",
+        "id": "1d21bfa1-efd7-80e3-b19b-fc0b6cc99e3b",
+        "parent": {
+          "type": "page_id",
+          "page_id": "1d21bfa1-efd7-8032-9ca4-c78c0c032fe9"
+        },
+        "created_time": "2025-04-11T09:03:00.000Z",
+        "last_edited_time": "2025-04-11T09:03:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "has_children": false,
+        "archived": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "チップソー、レーザーカッターなどの怪我の恐れがある機材は教員または部長の許可なく使用することはできない。",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "チップソー、レーザーカッターなどの怪我の恐れがある機材は教員または部長の許可なく使用することはできない。",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "object": "block",
+        "id": "1d21bfa1-efd7-8093-92a2-efb3af0b5bea",
+        "parent": {
+          "type": "page_id",
+          "page_id": "1d21bfa1-efd7-8032-9ca4-c78c0c032fe9"
+        },
+        "created_time": "2025-04-11T09:03:00.000Z",
+        "last_edited_time": "2025-04-11T09:03:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "has_children": false,
+        "archived": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "機材や工具類を使用する際は刃や熱に十分注意すること。",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "機材や工具類を使用する際は刃や熱に十分注意すること。",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "object": "block",
+        "id": "1d21bfa1-efd7-80e2-9467-e22101e2fb40",
+        "parent": {
+          "type": "page_id",
+          "page_id": "1d21bfa1-efd7-8032-9ca4-c78c0c032fe9"
+        },
+        "created_time": "2025-04-11T09:03:00.000Z",
+        "last_edited_time": "2025-04-11T09:03:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "has_children": false,
+        "archived": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "不備が無い場合を除いて、使用者が怪我をした際にIoT部及び学校は一切の責任を負わないものとする。",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "不備が無い場合を除いて、使用者が怪我をした際にIoT部及び学校は一切の責任を負わないものとする。",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      }
+    ]
+  },
+  {
+    "id": "1d21bfa1-efd7-80b2-a57a-c040b172cfdf",
+    "properties": {
+      "day": {
+        "id": "%3A%3BXE",
+        "type": "date",
+        "date": {
+          "start": "2025-04-11",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "title": {
+        "id": "%3AB~X",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "会費について",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "会費について",
+            "href": null
+          }
+        ]
+      },
+      "status": {
+        "id": "qG%3F%3E",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "8838b773-09a0-40fd-86cc-dcf6d0e1607e",
+            "name": "now",
+            "color": "green"
+          }
+        ]
+      },
+      "number": {
+        "id": "title",
+        "type": "title",
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "第5条",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "第5条",
+            "href": null
+          }
+        ]
+      }
+    },
+    "content": [
+      {
+        "object": "block",
+        "id": "1d21bfa1-efd7-8000-8123-fbb00fb9f3a0",
+        "parent": {
+          "type": "page_id",
+          "page_id": "1d21bfa1-efd7-80b2-a57a-c040b172cfdf"
+        },
+        "created_time": "2025-04-11T09:03:00.000Z",
+        "last_edited_time": "2025-04-11T09:03:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "has_children": true,
+        "archived": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "IoT部に所属する者には1年ごとに以下の会費を徴収する。",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "IoT部に所属する者には1年ごとに以下の会費を徴収する。",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "children": [
+          {
+            "object": "block",
+            "id": "1d21bfa1-efd7-8081-ac58-ffabd8481bb7",
+            "parent": {
+              "type": "block_id",
+              "block_id": "1d21bfa1-efd7-8000-8123-fbb00fb9f3a0"
+            },
+            "created_time": "2025-04-11T09:03:00.000Z",
+            "last_edited_time": "2025-04-11T09:03:00.000Z",
+            "created_by": {
+              "object": "user",
+              "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+            },
+            "last_edited_by": {
+              "object": "user",
+              "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+            },
+            "has_children": false,
+            "archived": false,
+            "in_trash": false,
+            "type": "bulleted_list_item",
+            "bulleted_list_item": {
+              "rich_text": [
+                {
+                  "type": "text",
+                  "text": {
+                    "content": "1年生：2,000円",
+                    "link": null
+                  },
+                  "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                  },
+                  "plain_text": "1年生：2,000円",
+                  "href": null
+                }
+              ],
+              "color": "default"
+            }
+          },
+          {
+            "object": "block",
+            "id": "1d21bfa1-efd7-80d2-b4bb-c780dbfc054f",
+            "parent": {
+              "type": "block_id",
+              "block_id": "1d21bfa1-efd7-8000-8123-fbb00fb9f3a0"
+            },
+            "created_time": "2025-04-11T09:03:00.000Z",
+            "last_edited_time": "2025-04-11T09:03:00.000Z",
+            "created_by": {
+              "object": "user",
+              "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+            },
+            "last_edited_by": {
+              "object": "user",
+              "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+            },
+            "has_children": false,
+            "archived": false,
+            "in_trash": false,
+            "type": "bulleted_list_item",
+            "bulleted_list_item": {
+              "rich_text": [
+                {
+                  "type": "text",
+                  "text": {
+                    "content": "2年生以上：5,000円",
+                    "link": null
+                  },
+                  "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                  },
+                  "plain_text": "2年生以上：5,000円",
+                  "href": null
+                }
+              ],
+              "color": "default"
+            }
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "id": "1d21bfa1-efd7-8089-9b0b-cc6df10f22cb",
+        "parent": {
+          "type": "page_id",
+          "page_id": "1d21bfa1-efd7-80b2-a57a-c040b172cfdf"
+        },
+        "created_time": "2025-04-11T09:03:00.000Z",
+        "last_edited_time": "2025-04-11T09:03:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "has_children": false,
+        "archived": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "尚、徴収した会費は退部やいかなる場合でも返還することはないものとする。",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "尚、徴収した会費は退部やいかなる場合でも返還することはないものとする。",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "object": "block",
+        "id": "1d21bfa1-efd7-807f-bfba-fcd251e4fd1d",
+        "parent": {
+          "type": "page_id",
+          "page_id": "1d21bfa1-efd7-80b2-a57a-c040b172cfdf"
+        },
+        "created_time": "2025-04-11T09:03:00.000Z",
+        "last_edited_time": "2025-04-11T09:03:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "has_children": false,
+        "archived": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "徴収した会費の用途は月例会での部員による投票の下、過半数の票を集めた場合に使用される。",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "徴収した会費の用途は月例会での部員による投票の下、過半数の票を集めた場合に使用される。",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "object": "block",
+        "id": "1d21bfa1-efd7-804d-b70a-f97442abab48",
+        "parent": {
+          "type": "page_id",
+          "page_id": "1d21bfa1-efd7-80b2-a57a-c040b172cfdf"
+        },
+        "created_time": "2025-04-11T09:03:00.000Z",
+        "last_edited_time": "2025-04-11T09:03:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "has_children": false,
+        "archived": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "会費は同意書を提出した後、部活動に参加した際に部長が個人ごとに徴収する。",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "会費は同意書を提出した後、部活動に参加した際に部長が個人ごとに徴収する。",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      }
+    ]
+  },
+  {
+    "id": "1d21bfa1-efd7-80b8-bc98-e0a8581818af",
+    "properties": {
+      "day": {
+        "id": "%3A%3BXE",
+        "type": "date",
+        "date": {
+          "start": "2025-04-11",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "title": {
+        "id": "%3AB~X",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "体験入部について",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "体験入部について",
+            "href": null
+          }
+        ]
+      },
+      "status": {
+        "id": "qG%3F%3E",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "8838b773-09a0-40fd-86cc-dcf6d0e1607e",
+            "name": "now",
+            "color": "green"
+          }
+        ]
+      },
+      "number": {
+        "id": "title",
+        "type": "title",
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "第6条",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "第6条",
+            "href": null
+          }
+        ]
+      }
+    },
+    "content": [
+      {
+        "object": "block",
+        "id": "1d21bfa1-efd7-8050-812f-c9cb62d2d157",
+        "parent": {
+          "type": "page_id",
+          "page_id": "1d21bfa1-efd7-80b8-bc98-e0a8581818af"
+        },
+        "created_time": "2025-04-11T09:03:00.000Z",
+        "last_edited_time": "2025-04-11T09:03:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "has_children": false,
+        "archived": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "1年生のみ、1度だけ30日間の体験入部をすることが可能である。",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "1年生のみ、1度だけ30日間の体験入部をすることが可能である。",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "object": "block",
+        "id": "1d21bfa1-efd7-80fc-98ab-ff7ae17f511f",
+        "parent": {
+          "type": "page_id",
+          "page_id": "1d21bfa1-efd7-80b8-bc98-e0a8581818af"
+        },
+        "created_time": "2025-04-11T09:03:00.000Z",
+        "last_edited_time": "2025-04-11T09:03:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "has_children": true,
+        "archived": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "体験入部者は第5条の会費を支払う義務は無く、部員と同等にIoT Laboを使用できる。",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "体験入部者は第5条の会費を支払う義務は無く、部員と同等にIoT Laboを使用できる。",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "children": [
+          {
+            "object": "block",
+            "id": "1d21bfa1-efd7-8095-9b03-f7ba046e88c9",
+            "parent": {
+              "type": "block_id",
+              "block_id": "1d21bfa1-efd7-80fc-98ab-ff7ae17f511f"
+            },
+            "created_time": "2025-04-11T09:03:00.000Z",
+            "last_edited_time": "2025-04-11T09:03:00.000Z",
+            "created_by": {
+              "object": "user",
+              "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+            },
+            "last_edited_by": {
+              "object": "user",
+              "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+            },
+            "has_children": false,
+            "archived": false,
+            "in_trash": false,
+            "type": "paragraph",
+            "paragraph": {
+              "rich_text": [
+                {
+                  "type": "text",
+                  "text": {
+                    "content": "ただし、IoT Laboに入室できる体験入部者は最大5名、かつ先着順とする。",
+                    "link": null
+                  },
+                  "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                  },
+                  "plain_text": "ただし、IoT Laboに入室できる体験入部者は最大5名、かつ先着順とする。",
+                  "href": null
+                }
+              ],
+              "color": "default"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "1d21bfa1-efd7-8004-bd28-f4ac60ee1b5b",
+    "properties": {
+      "day": {
+        "id": "%3A%3BXE",
+        "type": "date",
+        "date": {
+          "start": "2025-04-11",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "title": {
+        "id": "%3AB~X",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "規約違反者の処分",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "規約違反者の処分",
+            "href": null
+          }
+        ]
+      },
+      "status": {
+        "id": "qG%3F%3E",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "8838b773-09a0-40fd-86cc-dcf6d0e1607e",
+            "name": "now",
+            "color": "green"
+          }
+        ]
+      },
+      "number": {
+        "id": "title",
+        "type": "title",
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "第7条",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "第7条",
+            "href": null
+          }
+        ]
+      }
+    },
+    "content": [
+      {
+        "object": "block",
+        "id": "1d21bfa1-efd7-806c-949e-e3e32a8f034c",
+        "parent": {
+          "type": "page_id",
+          "page_id": "1d21bfa1-efd7-8004-bd28-f4ac60ee1b5b"
+        },
+        "created_time": "2025-04-11T09:02:00.000Z",
+        "last_edited_time": "2025-04-11T09:02:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "has_children": false,
+        "archived": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "上記の規約を常習的に違反する者には顧問・部長・副部長（以下、管理者とする）から注意勧告を促す。",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "上記の規約を常習的に違反する者には顧問・部長・副部長（以下、管理者とする）から注意勧告を促す。",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "object": "block",
+        "id": "1d21bfa1-efd7-8048-8548-ffe859ce5b37",
+        "parent": {
+          "type": "page_id",
+          "page_id": "1d21bfa1-efd7-8004-bd28-f4ac60ee1b5b"
+        },
+        "created_time": "2025-04-11T09:02:00.000Z",
+        "last_edited_time": "2025-04-11T09:02:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "has_children": false,
+        "archived": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "注意勧告後、同様の違反を繰り返すようであれば、部長の判断により退部（除名または一時退部）処分を行う。",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "注意勧告後、同様の違反を繰り返すようであれば、部長の判断により退部（除名または一時退部）処分を行う。",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "object": "block",
+        "id": "1d21bfa1-efd7-8076-b98d-cf945ef97f72",
+        "parent": {
+          "type": "page_id",
+          "page_id": "1d21bfa1-efd7-8004-bd28-f4ac60ee1b5b"
+        },
+        "created_time": "2025-04-11T09:02:00.000Z",
+        "last_edited_time": "2025-04-11T09:02:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "has_children": false,
+        "archived": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "規約違反者の処分について最終的な責任は部長が負うものとする。",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "規約違反者の処分について最終的な責任は部長が負うものとする。",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      }
+    ]
+  },
+  {
+    "id": "1d21bfa1-efd7-80f0-a9ce-fdc43cd97cb9",
+    "properties": {
+      "day": {
+        "id": "%3A%3BXE",
+        "type": "date",
+        "date": {
+          "start": "2025-04-11",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "title": {
+        "id": "%3AB~X",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "部長の権限",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "部長の権限",
+            "href": null
+          }
+        ]
+      },
+      "status": {
+        "id": "qG%3F%3E",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "8838b773-09a0-40fd-86cc-dcf6d0e1607e",
+            "name": "now",
+            "color": "green"
+          }
+        ]
+      },
+      "number": {
+        "id": "title",
+        "type": "title",
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "第8条",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "第8条",
+            "href": null
+          }
+        ]
+      }
+    },
+    "content": [
+      {
+        "object": "block",
+        "id": "1d21bfa1-efd7-801b-8a79-f1e0162918d0",
+        "parent": {
+          "type": "page_id",
+          "page_id": "1d21bfa1-efd7-80f0-a9ce-fdc43cd97cb9"
+        },
+        "created_time": "2025-04-11T09:02:00.000Z",
+        "last_edited_time": "2025-04-11T09:02:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "has_children": false,
+        "archived": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "部長は副部長、渉外、広報などの役職を任命する権限を持つ。",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "部長は副部長、渉外、広報などの役職を任命する権限を持つ。",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "object": "block",
+        "id": "1d21bfa1-efd7-8025-8429-e2ac26f59431",
+        "parent": {
+          "type": "page_id",
+          "page_id": "1d21bfa1-efd7-80f0-a9ce-fdc43cd97cb9"
+        },
+        "created_time": "2025-04-11T09:02:00.000Z",
+        "last_edited_time": "2025-04-11T09:02:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "has_children": false,
+        "archived": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "役職を設置するかどうかは部長の判断による。",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "役職を設置するかどうかは部長の判断による。",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "object": "block",
+        "id": "1d21bfa1-efd7-80f9-b6d5-c302a7877c91",
+        "parent": {
+          "type": "page_id",
+          "page_id": "1d21bfa1-efd7-80f0-a9ce-fdc43cd97cb9"
+        },
+        "created_time": "2025-04-11T09:02:00.000Z",
+        "last_edited_time": "2025-04-11T09:02:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "has_children": false,
+        "archived": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "部長は直ちに役職持ちを解任、譲渡する権限を持つ。",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "部長は直ちに役職持ちを解任、譲渡する権限を持つ。",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      }
+    ]
+  },
+  {
+    "id": "1d21bfa1-efd7-80ad-a54d-ed4942f3ddad",
+    "properties": {
+      "day": {
+        "id": "%3A%3BXE",
+        "type": "date",
+        "date": {
+          "start": "2025-04-11",
+          "end": null,
+          "time_zone": null
+        }
+      },
+      "title": {
+        "id": "%3AB~X",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "規約改訂について",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "規約改訂について",
+            "href": null
+          }
+        ]
+      },
+      "status": {
+        "id": "qG%3F%3E",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "8838b773-09a0-40fd-86cc-dcf6d0e1607e",
+            "name": "now",
+            "color": "green"
+          }
+        ]
+      },
+      "number": {
+        "id": "title",
+        "type": "title",
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "第9条",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "第9条",
+            "href": null
+          }
+        ]
+      }
+    },
+    "content": [
+      {
+        "object": "block",
+        "id": "1d21bfa1-efd7-8022-8cea-c137dbfe8be6",
+        "parent": {
+          "type": "page_id",
+          "page_id": "1d21bfa1-efd7-80ad-a54d-ed4942f3ddad"
+        },
+        "created_time": "2025-04-11T09:02:00.000Z",
+        "last_edited_time": "2025-04-11T09:02:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "has_children": false,
+        "archived": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "同意書の規約は管理者の話し合いの下、追記・改訂する場合がある。",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "同意書の規約は管理者の話し合いの下、追記・改訂する場合がある。",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "object": "block",
+        "id": "1d21bfa1-efd7-80e4-8c67-c57312ccdc87",
+        "parent": {
+          "type": "page_id",
+          "page_id": "1d21bfa1-efd7-80ad-a54d-ed4942f3ddad"
+        },
+        "created_time": "2025-04-11T09:02:00.000Z",
+        "last_edited_time": "2025-04-11T09:02:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "88051fc8-c9dd-4369-b682-9e467110f868"
+        },
+        "has_children": false,
+        "archived": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "その際、部員に再周知し同意書の再提出を求める。",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "その際、部員に再周知し同意書の再提出を求める。",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      }
+    ]
+  }
+]

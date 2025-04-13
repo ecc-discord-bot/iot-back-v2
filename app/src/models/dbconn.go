@@ -28,7 +28,8 @@ func Init() error {
 		return err
 	}
 
-	
+	// テーブル作成
+	db.AutoMigrate(&User{})
 
 	// グローバル変数に格納
 	dbconn = db

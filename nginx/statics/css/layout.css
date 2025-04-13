@@ -1,0 +1,34 @@
+/* 視点の調整と裏表切り替え時のアニメーション / 要素のサイズ */
+.perspective {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 640px;
+  height: 24rem;
+  transition: height 0.8s ease-in-out;
+}
+
+/* 規約側(裏)のサイズ */
+.flipped-container {
+  height: 40rem;
+}
+
+/* カードのサイズ */
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* カードを3D回転するための軸みたいなもの */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d; /* これがないと回転するときにおかしくなる */
+}
+
+/* jsで回転させるときにflippedを付与するので付与されたときに180度回転させる */
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}

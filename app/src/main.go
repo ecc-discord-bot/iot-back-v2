@@ -3,6 +3,7 @@ package main
 import (
 	"app/middlewares"
 	"app/models"
+	"app/oauth2"
 	"app/services"
 	"net/http"
 
@@ -19,6 +20,9 @@ func Init() {
 
 	// ミドルウェア初期化
 	middlewares.Init()
+
+	// Oauth2初期化
+	oauth2.InitGothic()
 }
 
 func main() {
@@ -35,6 +39,6 @@ func main() {
 	router.GET("/health", func(ctx echo.Context) error {
 		return ctx.String(http.StatusOK, "OK")
 	})
-	
+
 	router.Logger.Fatal(router.Start(":8080"))
 }
