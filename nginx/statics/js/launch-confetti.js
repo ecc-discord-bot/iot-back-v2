@@ -1,4 +1,4 @@
-function launchConfetti(duration = 3000, count = 30) {
+export function launchConfetti(duration = 3000, count = 30) {
   const container = document.getElementById("confetti-container");
 
   for (let i = 0; i < count; i++) {
