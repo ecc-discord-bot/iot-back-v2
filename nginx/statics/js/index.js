@@ -94,8 +94,14 @@ const loginButton2 = document.getElementById("loginButton2");
 const viewTermsButton = document.getElementById("view-terms-button");
 
 async function InitUI(isAgreed) {
-    // リンクを取得
-    const discordLink = await auth.Get("/app/invite", {});
+    var discordLink = "";
+    
+    try {
+        // リンクを取得
+        discordLink = await auth.Get("/app/invite", {});
+    } catch (error) {
+        console.error(error);
+    }
 
     // UI
     setupUI(postStudentInfo,isAgreed,discordLink["url"]);
