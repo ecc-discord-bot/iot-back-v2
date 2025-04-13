@@ -1,6 +1,6 @@
 import { fetchAgreeData } from "./fetch-agree-data.js";
 
-export function setupUI(postStudentInfo) {
+export function setupUI(postStudentInfo,isAgreed) {
   const card = document.getElementById("card");
   const perspectiveContainer = document.getElementById("perspective-container");
   const viewTermsButton = document.getElementById("view-terms-button");
@@ -39,4 +39,19 @@ export function setupUI(postStudentInfo) {
       loadingOverlay.classList.remove("visible");
     }
   });
+
+  if (isAgreed) {
+    loadingOverlay.classList.add("visible");
+    card.classList.remove("flipped");
+    perspectiveContainer.classList.remove("flipped-container");
+
+    const frontCard = card.querySelector(".card-front");
+    frontCard.innerHTML = `
+      <div class="text-center">
+        <h2 class="text-green">ログイン成功！</h2>
+        <p class="text-gray">ようこそ！</p>
+      </div>`;
+    
+    loadingOverlay.classList.remove("visible");
+  }
 }

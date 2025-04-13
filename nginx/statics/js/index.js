@@ -5,6 +5,9 @@ const auth = new AuthKit('/auth/');
 
 function LoginSuccess() {
     EnableMicrosoft();
+
+    // リロード
+    window.location.reload();
 }
 
 function EnableMicrosoft() {
@@ -30,18 +33,25 @@ function DisableMicrosoft() {
 }
 
 async function postStudentInfo(userName, userClass) {
+    console.log(userName, userClass);
+
     // 同意ボタンを押したときのイベント
     try {
         await auth.Post("/app/terms/accept", {
+            "Content-Type": "application/json"
+        }, JSON.stringify({
             "UserName": userName,
             "UserClass": userClass
-        });
+        }));
     } catch (error) {
         console.error(error);
     }
 }
 
 async function Init() {
+    // UI 初期化
+    InitUI(false);
+
     // ログインしているか確認
     if (await auth.GetInfo() != null) {
         // ログイン済み
@@ -57,6 +67,12 @@ async function Init() {
         // 同意済みか
         if (req["IsAgreed"]) {
             // 同意済みの場合
+            InitUI(true);
+            
+            // microsoft を無効化
+            DisableMicrosoft();
+
+            return;
         } else {
             // 同意していない場合
             DisableMicrosoft();
@@ -64,6 +80,7 @@ async function Init() {
     } catch (error) {
         console.error(error);
     }
+
 }
 
 function OauthLogin(provider) {
@@ -76,9 +93,9 @@ const loginButton = document.getElementById("loginButton1");
 const loginButton2 = document.getElementById("loginButton2");
 const viewTermsButton = document.getElementById("view-terms-button");
 
-document.addEventListener("DOMContentLoaded", () => {
+function InitUI(isAgreed) {
     // UI
-    setupUI(postStudentInfo);
+    setupUI(postStudentInfo,isAgreed);
 
     // Discordログインボタンを押したとき
     loginButton.addEventListener("click", function () {
@@ -97,6 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // リダイレクト
         window.location.href = "/app/aclink";
     });
+};
 
-    Init();
-});
+Init();

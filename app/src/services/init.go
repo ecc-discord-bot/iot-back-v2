@@ -1,6 +1,10 @@
 package services
 
-func Init() {
-	
-}
+import (
+	"app/spreadsheet"
+)
 
+func Init() {
+	// スプレッドシート初期化
+	spreadsheet.SpreadsheetInit()
+}

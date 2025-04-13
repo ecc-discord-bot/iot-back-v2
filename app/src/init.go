@@ -28,6 +28,9 @@ func SetupRouter(router *echo.Echo) {
 	// linkステータス
 	router.GET("/link/status", controllers.LinkStatus,middlewares.RequireAuth)
 
+	// 同意エンドポイント
+	router.POST("/terms/accept", controllers.AcceptTerms,middlewares.RequireAuth)
+
 	// hello world
 	router.GET("/hello", controllers.Hello,middlewares.RequireAuth)
 }
