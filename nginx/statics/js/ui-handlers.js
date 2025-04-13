@@ -33,7 +33,7 @@ export function setupUI(postStudentInfo, isAgreed, ServerUrl) {
       frontCard.innerHTML = `
         <div class="text-center">
           <h2 class="text-gray">よこそIoT部！</h2>
-          <div href="${ServerUrl}" class="btn btn-blue">IoT部へ</div>
+          <a href="${ServerUrl}" class="btn btn-blue">IoT部へ</a>
         </div>`;
     } catch (e) {
       alert("送信に失敗しました");
@@ -44,6 +44,7 @@ export function setupUI(postStudentInfo, isAgreed, ServerUrl) {
 
   if (isAgreed) {
     loadingOverlay.classList.add("visible");
+    setInterval(() => launchConfetti(8000, 10), 500);
     card.classList.remove("flipped");
     perspectiveContainer.classList.remove("flipped-container");
 
@@ -51,7 +52,7 @@ export function setupUI(postStudentInfo, isAgreed, ServerUrl) {
     frontCard.innerHTML = `
       <div class="text-center">
         <h2 class="text-gray">よこそIoT部！</h2>
-        <div href="${ServerUrl}" class="btn btn-blue">IoT部のDiscordへ参加</div>
+        <a href="${ServerUrl}" class="btn btn-blue">IoT部のDiscordへ参加</a>
       </div>`;
     loadingOverlay.classList.remove("visible");
   }
