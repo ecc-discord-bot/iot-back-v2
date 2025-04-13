@@ -17,8 +17,8 @@ export function setupUI(postStudentInfo,isAgreed,ServerUrl) {
   });
 
   confirmTermsButton.addEventListener("click", async () => {
-    const userName = document.getElementById("userName")?.value?.trim();
-    const userClass = document.getElementById("userClass")?.value?.trim();
+    const userName = document.getElementById("user-name")?.value?.trim();
+    const userClass = document.getElementById("user-class")?.value?.trim();
     if (!userName || !userClass) return alert("名前とクラスを入力してください");
 
     try {

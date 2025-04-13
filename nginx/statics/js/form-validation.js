@@ -3,18 +3,18 @@ export function appendNameClassForm(confirmTermsButton, termsScrollContainer, ag
   formWrapper.style.marginTop = "1.2rem";
   formWrapper.innerHTML = `
     <div class="input-container">
-      <label for="userName">名前：</label>
-      <input type="text" id="userName" />
+      <label for="user-name">名前：</label>
+      <input type="text" id="user-name" />
     </div>
     <div class="input-container">
-      <label for="userClass">クラス：</label>
-      <input type="text" id="userClass" />
+      <label for="user-class">クラス：</label>
+      <input type="text" id="user-class" />
     </div>
   `;
   agreeList.appendChild(formWrapper);
 
-  const userNameInput = formWrapper.querySelector("#userName");
-  const userClassInput = formWrapper.querySelector("#userClass");
+  const userNameInput = formWrapper.querySelector("#user-name");
+  const userClassInput = formWrapper.querySelector("#user-class");
 
   function validateInputs() {
     const name = userNameInput.value.trim();
