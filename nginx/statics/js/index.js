@@ -94,8 +94,8 @@ const loginButton2 = document.getElementById("loginButton2");
 const viewTermsButton = document.getElementById("view-terms-button");
 
 async function InitUI(isAgreed) {
-    var discordLink = "";
-    
+    var discordLink = {"url": ""};
+
     try {
         // リンクを取得
         discordLink = await auth.Get("/app/invite", {});
