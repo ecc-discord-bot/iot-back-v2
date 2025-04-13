@@ -22,6 +22,7 @@ services:
         tty: true
         env_file:
             - ./openssl/jwtKeys/private.env
+            - ./system-config/auth.env
         volumes:
             - ./auth/src:/root/src
         restart: always
