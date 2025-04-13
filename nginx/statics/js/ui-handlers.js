@@ -1,6 +1,7 @@
 import { fetchAgreeData } from "./fetch-agree-data.js";
+import { launchConfetti } from "./launch-confetti.js";
 
-export function setupUI(postStudentInfo,isAgreed,ServerUrl) {
+export function setupUI(postStudentInfo, isAgreed, ServerUrl) {
   const card = document.getElementById("card");
   const perspectiveContainer = document.getElementById("perspective-container");
   const viewTermsButton = document.getElementById("view-terms-button");
@@ -24,15 +25,15 @@ export function setupUI(postStudentInfo,isAgreed,ServerUrl) {
     try {
       loadingOverlay.classList.add("visible");
       await postStudentInfo(userName, userClass);
+      setInterval(() => launchConfetti(8000, 10), 500);
       card.classList.remove("flipped");
       perspectiveContainer.classList.remove("flipped-container");
 
       const frontCard = card.querySelector(".card-front");
       frontCard.innerHTML = `
         <div class="text-center">
-          <h2 class="text-green">ログイン成功！</h2>
-          <p class="text-gray">ようこそ！</p>
-          <a href="${ServerUrl}" class="btn btn-green">IoT部へ</a>
+          <h2 class="text-gray">よこそIoT部ようこそ！</h2>
+          <a href="${ServerUrl}" class="btn btn-blue">IoT部へ</a>
         </div>`;
     } catch (e) {
       alert("送信に失敗しました");
@@ -49,11 +50,9 @@ export function setupUI(postStudentInfo,isAgreed,ServerUrl) {
     const frontCard = card.querySelector(".card-front");
     frontCard.innerHTML = `
       <div class="text-center">
-        <h2 class="text-green">ログイン成功！</h2>
-        <p class="text-gray">ようこそ！</p>
-        <a href="${ServerUrl}" class="btn btn-green">IoT部へ</a>
+        <h2 class="text-gray">よこそIoT部ようこそ！</h2>
+        <a href="${ServerUrl}" class="btn btn-blue">IoT部のDiscordへ参加</a>
       </div>`;
-    
     loadingOverlay.classList.remove("visible");
   }
 }
