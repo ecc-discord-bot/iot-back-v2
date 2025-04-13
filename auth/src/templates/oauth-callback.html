@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン完了</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        p {
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .spinner {
+            margin: 20px auto;
+            width: 40px;
+            height: 40px;
+            border: 6px solid #f3f3f3; /* Light grey */
+            border-top: 6px solid #4CAF50; /* Green */
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .redirect-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .redirect-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ログインが完了しました！</h1>
+        <p>メイン画面にリダイレクト中です</p>
+        <div class="spinner"></div>
+        <div style="display: none;" id="token">{{index . "token"}}</div>
+        <div style="display: none;" id="isPopup">{{index . "isPopup"}}</div>
+        <a href="/statics/" class="redirect-button">メイン画面へ</a>
+    </div>
+
+    <script>
+        // トークンを取得
+        const token = document.getElementById('token').textContent;
+
+        // トークンをローカルストレージに保存
+        localStorage.setItem('token', token);
+
+        // isPopup を取得
+        const isPopup = document.getElementById('isPopup').textContent;
+
+        setTimeout(function() {
+            if (isPopup === "1") {
+                // 親ウィンドウにメッセージを送信
+                const parent = window.opener
+                parent.postMessage("Login-Success", "*")
+
+                // ポップアップウィンドウを閉じる
+                window.close();
+                return
+            }
+
+            window.location.href = "/statics/"; // メイン画面へのURLを指定
+        }, 1000); // 1秒後にリダイレクト
+    </script>
+</body>
+</html>

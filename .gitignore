@@ -1,0 +1,7 @@
+nginx/keys/*
+.DS_Store
+**__debug_bin**
+database/data/
+.env
+
+openssl/jwtKeys/

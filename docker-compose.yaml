@@ -1,0 +1,61 @@
+services:
+    # リバースプロキシけんWeサーバ
+    nginx:
+        hostname: nginx
+        image: nginx:latest
+        ports:
+            - 8370:8443
+        restart: always
+        tty: true
+        volumes:
+            - ./nginx/configs:/etc/nginx/conf.d/
+            - ./nginx/keys:/etc/nginx/keys
+            - ./nginx/statics:/etc/nginx/static/statics
+    
+    # 認証用コンテナ
+    auth:
+        hostname: auth
+        build:
+            context: ./auth
+            dockerfile: dockerfile
+            target: Develop
+        tty: true
+        env_file:
+            - ./openssl/jwtKeys/private.env
+        volumes:
+            - ./auth/src:/root/src
+        restart: always
+        depends_on:
+            - mysql
+    # 認証用コンテナ
+    app:
+        hostname: app
+        build:
+            context: ./app
+            dockerfile: dockerfile
+            target: Develop
+        tty: true
+        env_file:
+            - ./openssl/jwtKeys/public.env
+        volumes:
+            - ./app/src:/root/src
+        restart: always
+        depends_on:
+            - mysql
+            - auth
+    # データベース
+    mysql:
+        hostname: db
+        image: mysql
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_USER: main
+            MYSQL_PASSWORD: main
+            MYSQL_DATABASE: maindb
+            TZ: Asia/Tokyo
+        volumes:
+            - dbdata:/var/lib/mysql
+            - ./config/my.cnf:/etc/mysql/conf.d/my.cnf
+volumes:
+    dbdata:
