@@ -32,7 +32,7 @@ function DisableMicrosoft() {
 async function postStudentInfo(userName, userClass) {
     // 同意ボタンを押したときのイベント
     try {
-        await auth.Post("/app/link", {
+        await auth.Post("/app/terms/accept", {
             "UserName": userName,
             "UserClass": userClass
         });
