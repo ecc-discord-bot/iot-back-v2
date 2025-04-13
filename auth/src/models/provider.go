@@ -47,7 +47,7 @@ func InitProviders() {
 		ClientSecret: os.Getenv("GoogleClientSecret"),
 		CallbackURL:  os.Getenv("GoogleCallback"),
 		ProviderCode: Google,
-		IsEnabled:    1,
+		IsEnabled:    0,
 		Users:        []User{},
 	})
 
