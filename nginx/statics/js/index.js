@@ -50,7 +50,7 @@ async function postStudentInfo(userName, userClass) {
 
 async function Init() {
     // UI 初期化
-    InitUI(false);
+    await InitUI(false);
 
     // ログインしているか確認
     if (await auth.GetInfo() != null) {
@@ -67,7 +67,7 @@ async function Init() {
         // 同意済みか
         if (req["IsAgreed"]) {
             // 同意済みの場合
-            InitUI(true);
+            await InitUI(true);
             
             // microsoft を無効化
             DisableMicrosoft();
@@ -93,9 +93,12 @@ const loginButton = document.getElementById("loginButton1");
 const loginButton2 = document.getElementById("loginButton2");
 const viewTermsButton = document.getElementById("view-terms-button");
 
-function InitUI(isAgreed) {
+async function InitUI(isAgreed) {
+    // リンクを取得
+    const discordLink = auth.Get("/app/invite", {});
+
     // UI
-    setupUI(postStudentInfo,isAgreed);
+    setupUI(postStudentInfo,isAgreed,discordLink["url"]);
 
     // Discordログインボタンを押したとき
     loginButton.addEventListener("click", function () {

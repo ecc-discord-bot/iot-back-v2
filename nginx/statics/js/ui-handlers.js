@@ -1,6 +1,6 @@
 import { fetchAgreeData } from "./fetch-agree-data.js";
 
-export function setupUI(postStudentInfo,isAgreed) {
+export function setupUI(postStudentInfo,isAgreed,ServerUrl) {
   const card = document.getElementById("card");
   const perspectiveContainer = document.getElementById("perspective-container");
   const viewTermsButton = document.getElementById("view-terms-button");
@@ -32,6 +32,7 @@ export function setupUI(postStudentInfo,isAgreed) {
         <div class="text-center">
           <h2 class="text-green">ログイン成功！</h2>
           <p class="text-gray">ようこそ！</p>
+          <a href="${ServerUrl}" class="btn btn-green">IoT部へ</a>
         </div>`;
     } catch (e) {
       alert("送信に失敗しました");
@@ -50,6 +51,7 @@ export function setupUI(postStudentInfo,isAgreed) {
       <div class="text-center">
         <h2 class="text-green">ログイン成功！</h2>
         <p class="text-gray">ようこそ！</p>
+        <a href="${ServerUrl}" class="btn btn-green">IoT部へ</a>
       </div>`;
     
     loadingOverlay.classList.remove("visible");

@@ -4,6 +4,8 @@ import (
 	"app/controllers"
 	"app/middlewares"
 	"app/utils"
+	"net/http"
+	"os"
 
 	"github.com/labstack/echo-contrib/session"
 	"github.com/labstack/echo/v4"
@@ -30,6 +32,11 @@ func SetupRouter(router *echo.Echo) {
 
 	// 同意エンドポイント
 	router.POST("/terms/accept", controllers.AcceptTerms,middlewares.RequireAuth)
+
+	router.GET("/invite", func(ctx echo.Context) error {
+		// URL を返す
+		return ctx.JSON(http.StatusOK, echo.Map{"url": os.Getenv("INVITE_URL")})
+	}, middlewares.RequireAuth)
 
 	// hello world
 	router.GET("/hello", controllers.Hello,middlewares.RequireAuth)
