@@ -5,4 +5,4 @@ database/data/
 .env
 
 openssl/jwtKeys/
-system-config/auth.env
+config/auth.env
