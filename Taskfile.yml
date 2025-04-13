@@ -47,6 +47,7 @@ tasks:
     cmds:
       - task: genkey
       - task: up
+      - task: dbreset
   
   genkey:
     cmds:

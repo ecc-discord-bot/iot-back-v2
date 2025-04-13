@@ -22,7 +22,7 @@ services:
         tty: true
         env_file:
             - ./openssl/jwtKeys/private.env
-            - ./system-config/auth.env
+            - ./config/auth.env
         volumes:
             - ./auth/src:/root/src
         restart: always
@@ -51,12 +51,10 @@ services:
         restart: always
         environment:
             MYSQL_ROOT_PASSWORD: root
-            MYSQL_USER: main
-            MYSQL_PASSWORD: main
-            MYSQL_DATABASE: maindb
             TZ: Asia/Tokyo
         volumes:
             - dbdata:/var/lib/mysql
-            - ./config/my.cnf:/etc/mysql/conf.d/my.cnf
+            - ./database/my.cnf:/etc/mysql/conf.d/my.cnf
+            - ./database/script/init.sql:/docker-entrypoint-initdb.d/init.sql 
 volumes:
     dbdata:
