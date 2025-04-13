@@ -9,7 +9,7 @@ export function launchConfetti(duration = 3000, count = 30) {
     confetti.style.width = `${size}px`;
     confetti.style.height = `${size}px`;
 
-    confetti.style.backgroundImage = "url(../assets/sakura.webp)";
+    confetti.style.backgroundImage = "url(/statics/assets/sakura.webp)";
     confetti.style.backgroundSize = "cover";
     confetti.style.fontSize = `${size}px`;
     confetti.style.textAlign = "center";
