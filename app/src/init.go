@@ -35,7 +35,7 @@ func SetupRouter(router *echo.Echo) {
 
 	router.GET("/invite", func(ctx echo.Context) error {
 		// URL を返す
-		return ctx.JSON(http.StatusOK, echo.Map{"url": os.Getenv("INVITE_URL")})
+		return ctx.JSON(http.StatusOK, echo.Map{"url": os.Getenv("DiscordServerLink")})
 	}, middlewares.RequireAuth)
 
 	// hello world
