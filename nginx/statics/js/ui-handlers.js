@@ -33,7 +33,7 @@ export function setupUI(postStudentInfo, isAgreed, ServerUrl) {
       frontCard.innerHTML = `
         <div class="text-center">
           <h2 class="text-gray">よこそIoT部ようこそ！</h2>
-          <a href="${ServerUrl}" class="btn btn-blue">IoT部へ</a>
+          <div href="${ServerUrl}" class="btn btn-blue">IoT部へ</div>
         </div>`;
     } catch (e) {
       alert("送信に失敗しました");
@@ -51,7 +51,7 @@ export function setupUI(postStudentInfo, isAgreed, ServerUrl) {
     frontCard.innerHTML = `
       <div class="text-center">
         <h2 class="text-gray">よこそIoT部ようこそ！</h2>
-        <a href="${ServerUrl}" class="btn btn-blue">IoT部のDiscordへ参加</a>
+        <div href="${ServerUrl}" class="btn btn-blue">IoT部のDiscordへ参加</div>
       </div>`;
     loadingOverlay.classList.remove("visible");
   }
