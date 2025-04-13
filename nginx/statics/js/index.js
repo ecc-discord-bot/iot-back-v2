@@ -113,15 +113,19 @@ async function InitUI(isAgreed) {
 
     // Microsoftログインボタンを押したとき
     loginButton2.addEventListener("click", async function () {
-        // キャッシュ状態のトークンを削除
-        window.sessionStorage.removeItem("actoken");
-        window.sessionStorage.removeItem("actime");
+        try {
+            // キャッシュ状態のトークンを削除
+            window.sessionStorage.removeItem("actoken");
+            window.sessionStorage.removeItem("actime");
 
-        // セッションを張る
-        const req = await auth.Post("/app/startlink", {}, {});
+            // セッションを張る
+            const req = await auth.Post("/app/startlink", {}, {});
 
-        // リダイレクト
-        window.location.href = "/app/aclink";
+            // リダイレクト
+            window.location.href = "/app/aclink";
+        } catch (error) {
+            console.error(error);
+        }
     });
 };
 
