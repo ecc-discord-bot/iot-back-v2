@@ -7,3 +7,4 @@ database/data/
 openssl/jwtKeys/
 config/auth.env
 google_cred.json
+config/app.env

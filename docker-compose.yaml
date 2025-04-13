@@ -38,6 +38,7 @@ services:
         tty: true
         env_file:
             - ./openssl/jwtKeys/public.env
+            - ./config/app.env
         volumes:
             - ./app/src:/root/src
         restart: always
