@@ -4,7 +4,7 @@ import { appendNameClassForm } from "./form-validation.js";
 export async function fetchAgreeData(agreeList, confirmTermsButton, termsScrollContainer) {
   agreeList.innerHTML = '<div class="loading-overlay visible"><div class="spinner"></div><div>規約を読み込んでいます...</div></div>';
   try {
-    const res = await fetch("https://localhost:8370/statics/terms.json", {
+    const res = await fetch("/statics/terms.json", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     });
