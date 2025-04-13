@@ -32,7 +32,7 @@ export function setupUI(postStudentInfo, isAgreed, ServerUrl) {
       const frontCard = card.querySelector(".card-front");
       frontCard.innerHTML = `
         <div class="text-center">
-          <h2 class="text-gray">よこそIoT部ようこそ！</h2>
+          <h2 class="text-gray">よこそIoT部！</h2>
           <div href="${ServerUrl}" class="btn btn-blue">IoT部へ</div>
         </div>`;
     } catch (e) {
@@ -50,7 +50,7 @@ export function setupUI(postStudentInfo, isAgreed, ServerUrl) {
     const frontCard = card.querySelector(".card-front");
     frontCard.innerHTML = `
       <div class="text-center">
-        <h2 class="text-gray">よこそIoT部ようこそ！</h2>
+        <h2 class="text-gray">よこそIoT部！</h2>
         <div href="${ServerUrl}" class="btn btn-blue">IoT部のDiscordへ参加</div>
       </div>`;
     loadingOverlay.classList.remove("visible");
