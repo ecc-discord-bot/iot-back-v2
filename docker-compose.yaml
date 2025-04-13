@@ -18,7 +18,7 @@ services:
         build:
             context: ./auth
             dockerfile: dockerfile
-            target: Develop
+            target: Release
         tty: true
         env_file:
             - ./openssl/jwtKeys/private.env
