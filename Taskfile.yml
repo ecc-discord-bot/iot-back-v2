@@ -48,6 +48,7 @@ tasks:
       - task: genkey
       - task: up
       - task: dbreset
+      - docker compose restart auth
   
   genkey:
     cmds:
