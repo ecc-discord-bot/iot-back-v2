@@ -94,17 +94,17 @@ const loginButton2 = document.getElementById("loginButton2");
 const viewTermsButton = document.getElementById("view-terms-button");
 
 async function InitUI(isAgreed) {
-    var discordLink = {"url": ""};
-
     try {
         // リンクを取得
-        discordLink = await auth.Get("/app/invite", {});
+        const discordLink = await auth.Get("/app/invite", {});
+            
+        // UI
+        setupUI(postStudentInfo,isAgreed,discordLink["url"]);
     } catch (error) {
         console.error(error);
+        setupUI(postStudentInfo,isAgreed,"");
     }
 
-    // UI
-    setupUI(postStudentInfo,isAgreed,discordLink["url"]);
 
     // Discordログインボタンを押したとき
     loginButton.addEventListener("click", function () {
