@@ -16,6 +16,7 @@
             <button id="loginButton1" class="btn btn-blue" style="margin-bottom: 1rem">1. Discord でログイン</button>
             <button id="loginButton2" class="btn btn-green btn-disabled" style="margin-bottom: 1.4rem" disabled>2. Microsoft でログイン</button>
             <button id="view-terms-button" class="btn-link btn-disabled" disabled>3. 規約を確認する</button>
+            <button id="toggle-steps-button">手順を確認する</button>
           </div>
           <div class="card-back">
             <div id="terms-scroll-container">
@@ -34,9 +35,50 @@
           <span class="text-gray" style="font-weight: 500">処理中...</span>
         </div>
       </div>
+      <div id="steps-curtain">
+        <div class="steps-container-inner">
+          <h3 class="text-2xl font-semibold mb-6 text-center text-gray-800">入部までのステップ</h3>
+          <div class="step">
+            <div class="step-icon">1</div>
+            <div class="step-content">
+              <h4>Discord でログイン</h4>
+              <ol>
+                <li>まずは「Discord でログイン」ボタンをクリックして、Discordアカウントで認証してください。</li>
+                <li>discordで認証後にdiscordに遷移されるのでその画面を閉じてください。</li>
+                <li>その後もう一度discordをクリックして許可してください。</li>
+              </ol>
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-icon">2</div>
+            <div class="step-content">
+              <h4>Microsoft でログイン</h4>
+              <p>次に、学校のMicrosoftアカウント（xxx@ecc.ac.jp）でログインしてください。Discord認証後にボタンが有効になります。</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-icon">3</div>
+            <div class="step-content">
+              <h4>利用規約の確認</h4>
+              <p>Microsoft認証後、「規約を確認する」ボタンが有効になります。クリックして内容をよくお読みください。</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-icon">4</div>
+            <div class="step-content">
+              <h4>規約への同意</h4>
+              <p>規約を最後までスクロールし、名前とクラスを入力後「確認して同意する」ボタンが有効になります。</p>
+            </div>
+          </div>
+          <div class="close-container">
+            <button id="close-steps-button">閉じる</button>
+          </div>
+        </div>
+      </div>
     </div>
-
     <script src="./authkit/authkit.js"></script>
+    <script src="./js/step.js"></script>
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>
