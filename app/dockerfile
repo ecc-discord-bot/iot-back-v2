@@ -24,6 +24,5 @@ RUN CGO_ENABLED=0 go build -x --ldflags "-s -w" -o /go/bin/app .
 
 # 実行環境
 FROM gcr.io/distroless/static-debian12 as Release
-COPY ./google_cred.json /google_cred.json
 COPY --from=build /go/bin/app /
 CMD ["/app"]
