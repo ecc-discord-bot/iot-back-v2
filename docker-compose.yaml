@@ -1,5 +1,5 @@
 services:
-    # リバースプロキシけんWeサーバ
+    # リバースプロキシ兼Webサーバ
     nginx:
         hostname: nginx
         image: nginx:latest
@@ -11,6 +11,9 @@ services:
             - ./nginx/configs:/etc/nginx/conf.d/
             - ./nginx/keys:/etc/nginx/keys
             - ./nginx/statics:/etc/nginx/static/statics
+        networks:
+            - frontend
+            - backend
     
     # 認証用コンテナ
     auth:
@@ -19,6 +22,7 @@ services:
             context: ./auth
             dockerfile: dockerfile
             target: Release
+            # target: Develop
         tty: true
         env_file:
             - ./openssl/jwtKeys/private.env
@@ -28,23 +32,33 @@ services:
         restart: always
         depends_on:
             - mysql
-    # 認証用コンテナ
+        networks:
+            - backend
+            - database
+    
+    # アプリケーションコンテナ
     app:
         hostname: app
         build:
             context: ./app
             dockerfile: dockerfile
-            target: Release
+            # target: Release
+            target: Develop
         tty: true
         env_file:
             - ./openssl/jwtKeys/public.env
             - ./config/app.env
         volumes:
             - ./app/src:/root/src
+            - ./config/google_cred.json:/root/src/google_cred.json
         restart: always
         depends_on:
             - mysql
             - auth
+        networks:
+            - backend
+            - database
+    
     # データベース
     mysql:
         hostname: db
@@ -56,6 +70,19 @@ services:
         volumes:
             - dbdata:/var/lib/mysql
             - ./database/my.cnf:/etc/mysql/conf.d/my.cnf
-            - ./database/script/init.sql:/docker-entrypoint-initdb.d/init.sql 
+            - ./database/script/init.sql:/docker-entrypoint-initdb.d/init.sql
+        networks:
+            - database
+
 volumes:
     dbdata:
+
+networks:
+    frontend:
+        # 外部からアクセス可能なネットワーク
+    database:
+        # データベース用のネットワーク
+        internal: true
+    backend:
+        # 内部コンテナ間通信用のネットワーク
+        internal: false  # インターネットアクセスを許可
