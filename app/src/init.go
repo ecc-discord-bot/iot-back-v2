@@ -38,6 +38,13 @@ func SetupRouter(router *echo.Echo) {
 		return ctx.JSON(http.StatusOK, echo.Map{"url": os.Getenv("DiscordServerLink")})
 	}, middlewares.RequireAuth)
 
+	// sync group
+	syncg := router.Group("/sync")
+	syncg.Use(middleware.KeyAuth(func(key string, ctx echo.Context) (bool, error) {
+		return key == os.Getenv("GAS_SECRETKEY"), nil
+	}))
+	syncg.POST("/data", controllers.SyncData)
+
 	// hello world
 	router.GET("/hello", controllers.Hello,middlewares.RequireAuth)
 }
