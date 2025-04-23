@@ -14,7 +14,7 @@ import (
 
 var spreadsheetID = ""
 var service *sheets.Service = nil
-var findstr = "管理シート!B2:B"
+var findstr = "管理シート!B3:B"
 
 func SpreadsheetInit() {
 	// 認証
@@ -109,14 +109,14 @@ func GetLastRow(find_value string) (Result, error) {
 		if row[0] == find_value {
 			isfind = true
 
-			// 2行目から始まるので+2
-			findindex = index + 2
+			// 3行目から始まるので+3
+			findindex = index + 3
 			break
 		}
 	}
 
-	//行数を返す (2行目から始まるので+2)
-	total_index := len(resp.Values) + 2
+	//行数を返す (3行目から始まるので+3)
+	total_index := len(resp.Values) + 3
 
 	return Result{Isfind: isfind, Index: findindex, Total: total_index}, nil
 }

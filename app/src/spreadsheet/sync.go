@@ -59,7 +59,7 @@ func SyncDatas() ([]SheetData, error) {
 	}
 
 	// 値を取得する
-	values, err := service.Spreadsheets.Values.Get(spreadsheetID, fmt.Sprintf("管理シート!A2:K%s", strconv.Itoa(result.Total-1))).DateTimeRenderOption("FORMATTED_STRING").Do()
+	values, err := service.Spreadsheets.Values.Get(spreadsheetID, fmt.Sprintf("管理シート!A3:K%s", strconv.Itoa(result.Total-1))).DateTimeRenderOption("FORMATTED_STRING").Do()
 
 	// エラー処理
 	if err != nil {
