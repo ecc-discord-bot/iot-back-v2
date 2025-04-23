@@ -2,6 +2,7 @@ package spreadsheet
 
 import (
 	"app/logger"
+	"app/models"
 	"fmt"
 	"strconv"
 	"time"
@@ -111,4 +112,79 @@ func ConvertTime(timeStr string) int64 {
 	// time.Time を int64 に変換
 	timeInt := timeData.Unix()
 	return timeInt
+}
+
+func Migrate() error {
+	// 全ユーザー取得
+	users, err := models.GetAllUsers()
+	if err != nil {
+		return err
+	}
+
+	// ユーザーを回す
+	for _, user := range users {
+		err = postUser(user)
+
+		// エラー処理
+		if err != nil {
+			logger.Println(err)
+			continue
+		}
+	}
+
+	return nil
+}
+
+func postUser(user models.User) error {
+	// spreadsheet から取得
+	result, err := GetLastRow(user.DiscordId)
+
+	// エラー処理
+	if err != nil {
+		return err
+	}
+
+	// 見つかった時
+	if result.Isfind {
+		logger.Println("既存ユーザー")
+
+		// spreadsheet に書き込む
+		err = WriteUser(fmt.Sprintf("管理シート!A%s", strconv.Itoa(result.Index)), User{
+			UserID:     user.UserID,
+			DiscordID:  user.DiscordId,
+			StudentsID: user.StudentsId,
+			Name:       user.Name,
+			Class:      user.Class,
+			IsPaid:     false,
+			IsAgreed:   true,
+			Time:       user.NowTime,
+			Signature:  user.Signature,
+		})
+
+		// エラー処理
+		if err != nil {
+			return err
+		}
+	} else {
+		logger.Println("新規ユーザー")
+		// spreadsheet に書き込む
+		err = WriteUser(fmt.Sprintf("管理シート!A%s", strconv.Itoa(result.Total)), User{
+			UserID:     user.UserID,
+			DiscordID:  user.DiscordId,
+			StudentsID: user.StudentsId,
+			Name:       user.Name,
+			Class:      user.Class,
+			IsPaid:     user.IsPaid,
+			IsAgreed:   user.IsAgreed,
+			Time:       user.NowTime,
+			Signature:  user.Signature,
+		})
+
+		// エラー処理
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
 }

@@ -44,3 +44,15 @@ func CreateUser(user User) error {
 func UpdateUser(user User) error {
 	return dbconn.Save(&user).Error
 }
+
+func GetAllUsers() ([]User, error) {
+	var users []User
+	result := dbconn.Find(&users)
+
+	// エラー処理
+	if result.Error != nil {
+		return []User{}, result.Error
+	}
+
+	return users, nil
+}
