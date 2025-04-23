@@ -57,7 +57,8 @@ func AcceptTerms(claim middlewares.AccessTokenClaim,args AccepterTerms) error {
 		logger.Println("既存ユーザー")
 
 		// spreadsheet に書き込む
-		err = spreadsheet.WriteUser(fmt.Sprintf("管理シート!B%s", strconv.Itoa(result.Index)), spreadsheet.User{
+		err = spreadsheet.WriteUser(fmt.Sprintf("管理シート!A%s", strconv.Itoa(result.Index)), spreadsheet.User{
+			UserID:     user.UserID,
 			DiscordID:  user.DiscordId,
 			StudentsID: user.StudentsId,
 			Name:       args.UserName,
@@ -75,7 +76,8 @@ func AcceptTerms(claim middlewares.AccessTokenClaim,args AccepterTerms) error {
 	} else {
 		logger.Println("新規ユーザー")
 		// spreadsheet に書き込む
-		err = spreadsheet.WriteUser(fmt.Sprintf("管理シート!B%s", strconv.Itoa(result.Total)), spreadsheet.User{
+		err = spreadsheet.WriteUser(fmt.Sprintf("管理シート!A%s", strconv.Itoa(result.Total)), spreadsheet.User{
+			UserID:     user.UserID,
 			DiscordID:  user.DiscordId,
 			StudentsID: user.StudentsId,
 			Name:       args.UserName,

@@ -14,11 +14,11 @@ import (
 
 var spreadsheetID = ""
 var service *sheets.Service = nil
-var findstr = "管理シート!B3:B"
+var findstr = "管理シート!B2:B"
 
 func SpreadsheetInit() {
 	// 認証
-	credential := option.WithCredentialsFile("./google_cred.json")
+	credential := option.WithCredentialsFile("/google_cred.json")
 
 	// 認証
 	srv, err := sheets.NewService(context.TODO(), credential)
@@ -32,6 +32,7 @@ func SpreadsheetInit() {
 }
 
 type User struct {
+	UserID     string
 	DiscordID  string
 	StudentsID string
 	Name       string
@@ -46,6 +47,8 @@ func WriteUser(range_str string, data User) error {
 	vr := &sheets.ValueRange{
 		Values: [][]interface{}{
 			{
+				//ユーザーID
+				data.UserID,
 				//DIscord ID
 				data.DiscordID,
 				//学籍番号
@@ -106,14 +109,14 @@ func GetLastRow(find_value string) (Result, error) {
 		if row[0] == find_value {
 			isfind = true
 
-			// 3行目から始まるので+3
-			findindex = index + 3
+			// 2行目から始まるので+2
+			findindex = index + 2
 			break
 		}
 	}
 
-	//行数を返す (3行目から始まるので+3)
-	total_index := len(resp.Values) + 3
+	//行数を返す (2行目から始まるので+2)
+	total_index := len(resp.Values) + 2
 
 	return Result{Isfind: isfind, Index: findindex, Total: total_index}, nil
 }

@@ -25,6 +25,18 @@ func GetUser(userid string) (User, error) {
 	return user, nil
 }
 
+func GetFromDiscordId(discordId string) (User, error) {
+	var user User
+	result := dbconn.Where(&User{DiscordId: discordId}).First(&user)
+
+	// エラー処理
+	if result.Error != nil {
+		return User{}, result.Error
+	}
+
+	return user, nil
+}
+
 func CreateUser(user User) error {
 	return dbconn.Create(&user).Error
 }
