@@ -60,7 +60,7 @@ func SyncDatas() ([]SheetData, error) {
 	}
 
 	// 値を取得する
-	values, err := service.Spreadsheets.Values.Get(spreadsheetID, fmt.Sprintf("管理シート!A3:K%s", strconv.Itoa(result.Total-1))).DateTimeRenderOption("FORMATTED_STRING").Do()
+	values, err := service.Spreadsheets.Values.Get(spreadsheetID, fmt.Sprintf("%s!A3:K%s", "操作シート", strconv.Itoa(result.Total-1))).DateTimeRenderOption("FORMATTED_STRING").Do()
 
 	// エラー処理
 	if err != nil {
@@ -149,7 +149,7 @@ func postUser(user models.User) error {
 		logger.Println("既存ユーザー")
 
 		// spreadsheet に書き込む
-		err = WriteUser(fmt.Sprintf("管理シート!A%s", strconv.Itoa(result.Index)), User{
+		err = WriteUser(fmt.Sprintf("%s!A%s",BaseSheet, strconv.Itoa(result.Index)), User{
 			UserID:     user.UserID,
 			DiscordID:  user.DiscordId,
 			StudentsID: user.StudentsId,
@@ -168,7 +168,7 @@ func postUser(user models.User) error {
 	} else {
 		logger.Println("新規ユーザー")
 		// spreadsheet に書き込む
-		err = WriteUser(fmt.Sprintf("管理シート!A%s", strconv.Itoa(result.Total)), User{
+		err = WriteUser(fmt.Sprintf("%s!A%s",BaseSheet, strconv.Itoa(result.Total)), User{
 			UserID:     user.UserID,
 			DiscordID:  user.DiscordId,
 			StudentsID: user.StudentsId,

@@ -14,7 +14,7 @@ import (
 
 var spreadsheetID = ""
 var service *sheets.Service = nil
-var findstr = "管理シート!B3:B"
+const BaseSheet = "管理シート"
 
 func SpreadsheetInit() {
 	// 認証
@@ -89,7 +89,7 @@ type Result struct {
 
 func GetLastRow(find_value string) (Result, error) {
 	//値取得
-	resp, err := service.Spreadsheets.Values.Get(spreadsheetID, findstr).Do()
+	resp, err := service.Spreadsheets.Values.Get(spreadsheetID, fmt.Sprintf("%s!B3:B", BaseSheet)).Do()
 
 	//エラー処理
 	if err != nil {
