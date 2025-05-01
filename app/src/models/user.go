@@ -1,8 +1,8 @@
 package models
 
 type User struct {
-	UserID     string `gorm:"primary_key"`
-	DiscordId  string
+	UserID     string 
+	DiscordId  string	`gorm:"primary_key"`
 	StudentsId string
 	Name       string
 	Class      string

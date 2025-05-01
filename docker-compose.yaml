@@ -21,14 +21,18 @@ services:
         build:
             context: ./auth
             dockerfile: dockerfile
-            # target: Release
-            target: Develop
+            target: runner
+            # target: Develop
         tty: true
         env_file:
             - ./openssl/jwtKeys/private.env
             - ./config/auth.env
         volumes:
             - ./auth/src:/root/src
+            - ./database/pbdata:/pocketbase/pb_data
+        environment:
+            GRPC_ADDR: ':9000'
+            GRPC_KEY: 'ORVBHieON30gk8dBo3DkMRPkMhpiyKS2NARNkmKwJogJ4uDZmKfoivZOMj0Xx70T'
         restart: always
         depends_on:
             - mysql
@@ -42,8 +46,8 @@ services:
         build:
             context: ./app
             dockerfile: dockerfile
-            # target: Release
-            target: Develop
+            target: Release
+            # target: Develop
         tty: true
         env_file:
             - ./openssl/jwtKeys/public.env

@@ -10,3 +10,4 @@ google_cred.json
 config/app.env
 config copy/
 auth/src/pb_data/
+database/pbdata/
