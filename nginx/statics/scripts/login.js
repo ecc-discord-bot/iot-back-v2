@@ -1,4 +1,5 @@
-const auth = new AuthKit('/auth/');
+// const auth = new AuthKit('/auth/');
+const auth = new PocketBase("/auth/")
 
 async function Init() {
     // ログインしているか確認

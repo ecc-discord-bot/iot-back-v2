@@ -1,27 +1,41 @@
-FROM golang:1.24.1-bullseye as Develop
+FROM golang:1.23.3-bookworm as Develop
 
-# 各種ツールインストール
-RUN apt update & apt install -y curl wget git 
+# 作業フォルダ指定
+WORKDIR /root/pocketbase
 
-# Build 
-FROM golang:1.24.1-bullseye as build
+# apt 更新
+RUN apt update
 
-# 各種ツールインストール
-RUN apt update & apt install -y curl wget git
+# ビルド環境
+FROM golang:1.23.3-bookworm as Build
 
-# コピー
-COPY ./src /root/src
+# apt 更新
+RUN apt update
 
-# ディレクトリ移動
-WORKDIR /root/src
+# 作業フォルダ指定
+WORKDIR /root/pocketbase
 
-# 依存モジュールインストール
+# ソースをコピー
+COPY ./src .
+
+# モジュールをダウンロード
 RUN go mod download
-# ビルド
-RUN CGO_ENABLED=0 go build -x --ldflags "-s -w" -o /go/bin/app .
+ARG GOOS=linux
+ARG GOARCH=amd64
+# ビルド成果物にデバック情報が含まれないようにする
+RUN go build -ldflags '-s -w' -o ./server
 
-# 実行環境
-FROM gcr.io/distroless/static-debian12 as Release
-COPY ./src/templates /templates
-COPY --from=build /go/bin/app /
-CMD ["/app"]
+
+# 実行する環境
+FROM debian:bookworm-slim as runner
+
+# TLS のためのパッケージ
+RUN apt update
+RUN apt install -y ca-certificates openssl
+
+# 作業フォルダ指定
+WORKDIR /pocketbase
+
+# ビルド感情からコピー
+COPY --from=Build /root/pocketbase/server .
+ENTRYPOINT ["./server","serve", "--http=0.0.0.0:8080"]

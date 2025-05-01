@@ -9,3 +9,4 @@ config/auth.env
 google_cred.json
 config/app.env
 config copy/
+auth/src/pb_data/
