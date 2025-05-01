@@ -53,7 +53,7 @@ async function Init() {
     await InitUI(false);
 
     // ログインしているか確認
-    if (await auth.GetInfo() != null) {
+    if (await auth.IsValid()) {
         // ログイン済み
         EnableMicrosoft();
     } else {

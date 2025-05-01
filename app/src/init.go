@@ -2,6 +2,7 @@ package main
 
 import (
 	"app/controllers"
+	"app/logger"
 	"app/middlewares"
 	"app/utils"
 	"net/http"
@@ -18,8 +19,10 @@ func SetupRouter(router *echo.Echo) {
 
 	router.Use(session.Middleware(utils.SessionStore))
 
+	logger.Println(os.Getenv("SessionSecret"))
+
 	// link開始
-	router.POST("/startlink", controllers.StartLink,middlewares.RequireAuth)
+	router.POST("/startlink", controllers.StartLink, middlewares.RequireAuth)
 
 	// 実際にリンク
 	router.GET("/aclink", controllers.AcLink)
@@ -28,10 +31,10 @@ func SetupRouter(router *echo.Echo) {
 	router.GET("/link/callback", controllers.Callback)
 
 	// linkステータス
-	router.GET("/link/status", controllers.LinkStatus,middlewares.RequireAuth)
+	router.GET("/link/status", controllers.LinkStatus, middlewares.RequireAuth)
 
 	// 同意エンドポイント
-	router.POST("/terms/accept", controllers.AcceptTerms,middlewares.RequireAuth)
+	router.POST("/terms/accept", controllers.AcceptTerms, middlewares.RequireAuth)
 
 	router.GET("/invite", func(ctx echo.Context) error {
 		// URL を返す
@@ -46,5 +49,5 @@ func SetupRouter(router *echo.Echo) {
 	syncg.POST("/data", controllers.SyncData)
 
 	// hello world
-	router.GET("/hello", controllers.Hello,middlewares.RequireAuth)
+	router.GET("/hello", controllers.Hello, middlewares.RequireAuth)
 }

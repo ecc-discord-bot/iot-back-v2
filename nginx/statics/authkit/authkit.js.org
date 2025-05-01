@@ -14,8 +14,6 @@ class AuthKit {
         // ベースURL
         this.baseURL = url;
 
-        // pocketbase インスタンス
-        this.authkit = new PocketBase(this.baseURL);
     }
 
     async login(username, password) {
@@ -36,17 +34,25 @@ class AuthKit {
     }
 
     async OauthLogin(provider,LoginCallback) {
-        try {
-            // ポップアップ
-            const authData = await this.authkit.collection('users').authWithOAuth2({ provider: provider });
-
-            console.log(authData);
-
-            // ログインコールバック
-            LoginCallback();
-        } catch (error) {
-            console.error(error);
+        // ポップアップ
+        if (provider == "discord") {
+            this.openPopup(this.baseURL + AuthKit.DiscordAuthURL);
         }
+
+        if (provider == "google") {
+            this.openPopup(this.baseURL + AuthKit.GoogleAuthURL);
+        }
+
+        if (provider == "github") {
+            this.openPopup(this.baseURL + AuthKit.GithubAuthURL);
+        }
+
+        if (provider == "microsoftonline") {
+            this.openPopup(this.baseURL + AuthKit.MicrosoftAuthURL);
+        }
+
+        // コールバック
+        this.LoginCallback = LoginCallback;
     }
 
     async getToken() {
@@ -57,11 +63,11 @@ class AuthKit {
         }
 
         // トークンを取得
-        const req = await fetch(this.baseURL + '/jwt', {
+        const req = await fetch(this.baseURL + '/token', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                "Authorization": this.authkit.authStore.token
+                "Authorization": localStorage.getItem("token")
             }
         });
 
@@ -71,17 +77,26 @@ class AuthKit {
 
             console.log("Get Token");
 
-            console.log(data);
-
             // トークンを保存する
-            window.sessionStorage.setItem("actoken", data.result);
+            window.sessionStorage.setItem("actoken", data.token);
             // 現在の時間を保存する
             window.sessionStorage.setItem("actime", Date.now());
 
-            return data.result;
+            return data.token;
         }
 
         return null;
+    }
+
+    openPopup(url) {
+        window.open(url + "?popup=1", "popupWindow", "width=600,height=600");
+
+        window.addEventListener("message", (event) => {
+            if (event.data == "Login-Success") {
+                // コールバック
+                this.LoginCallback();
+            }
+        });
     }
 
     async Post(url,headers,body) {
@@ -118,9 +133,29 @@ class AuthKit {
 
         return null;
     }
+    
+    async GetInfo() {
+        try {
+            // 情報を取得
+            const req = await fetch(this.baseURL + '/me', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    "Authorization": localStorage.getItem("token")
+                }
+            });
 
-    async IsValid() {
-        return this.authkit.authStore.isValid;
+            if (!req.ok) {
+                return null;
+            }
+
+            // 情報を取得
+            return await req.json();
+
+        } catch (error) {
+            console.error(error);
+            return null;
+        }
     }
 }
 

@@ -1,9 +1,9 @@
 // const auth = new AuthKit('/auth/');
-const auth = new PocketBase("/auth/")
+const auth = new PocketBase("/auth/");
 
 async function Init() {
     // ログインしているか確認
-    if (await auth.GetInfo() != null) {
+    if (pb.authStore.isValid) {
         // ログイン済み
         window.location.href = "./home.html";
     }

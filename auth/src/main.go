@@ -4,6 +4,8 @@ import (
 	"log"
 	"net/http"
 	"pocketbasec/grpc"
+	"pocketbasec/logger"
+	"pocketbasec/services"
 	"time"
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
@@ -99,6 +101,7 @@ func RunServer() {
 
 			// エラー処理
 			if err != nil {
+				logger.PrintErr(err)
 				app.Logger().Error("error",err)
 				return evt.Error(http.StatusInternalServerError, "something went wrong", map[string]validation.Error{
 					"title": validation.NewError("message", "failed to get auth"),
@@ -113,14 +116,32 @@ func RunServer() {
 			// ラベルの文字列取得
 			return_labels := GetLabels(app,labels)
 
-			// トークンを生成する
-			token,err := GenJwt(JwtPayload{
-				UserID: authRecord.Id,
-				Labels: return_labels,
+			// 認証プロバイダの情報取得
+			records,err := app.FindAllExternalAuthsByRecord(authRecord)
+
+			// エラー処理
+			if err != nil {
+				logger.PrintErr(err)
+				app.Logger().Error("error",err)
+				return evt.Error(http.StatusInternalServerError, "something went wrong", map[string]validation.Error{
+					"title": validation.NewError("message", "failed to get auth"),
+				})
+			}
+
+			// 認証プロバイダの情報を取得
+			provider := records[0]
+
+			// アクセストークン生成
+			token,err := services.AccessTokenJwt(services.AccessTokenClaim{
+				UserID:   authRecord.Id,
+				Labels:   return_labels,
+				ProvCode: provider.Provider(),
+				ProvUid:  provider.ProviderId(),
 			})
 
 			// エラー処理
 			if err != nil {
+				logger.PrintErr(err)
 				app.Logger().Error("error",err)
 				return evt.Error(http.StatusInternalServerError, "something went wrong", map[string]validation.Error{
 					"title": validation.NewError("message", "failed to generate token"),
@@ -197,6 +218,9 @@ func RunServer() {
 
 	// GRPC 起動
 	go grpc.RunServer(app)
+
+	// jwt 初期化
+	services.Init()
 
 	// 起動
 	if err := app.Start(); err != nil {
