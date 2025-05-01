@@ -13,7 +13,7 @@ import (
 func LinkAccount(claim middlewares.AccessTokenClaim,gothUser goth.User) error {
 
 	// ユーザーを取得する
-	_, err := models.GetUser(claim.UserID)
+	_, err := models.GetFromDiscordId(claim.ProvUid)
 
 	// エラー処理
 	if err == nil {

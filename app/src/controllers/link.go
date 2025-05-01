@@ -123,7 +123,7 @@ func LinkStatus(ctx echo.Context) error {
 	claim := ctx.Get("claim").(middlewares.AccessTokenClaim)
 
 	// ユーザーを取得する
-	user, err := services.GetUser(claim.UserID)
+	user, err := services.GetDiscordUser(claim.ProvUid)
 
 	// エラー処理
 	if err != nil {
