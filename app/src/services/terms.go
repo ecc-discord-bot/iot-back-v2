@@ -18,7 +18,7 @@ type AccepterTerms struct {
 
 func AcceptTerms(claim middlewares.AccessTokenClaim,args AccepterTerms) error {
 	// ユーザーを取得する
-	user, err := models.GetUser(claim.UserID)
+	user, err := models.GetFromDiscordId(claim.ProvUid)
 
 	// エラー処理
 	if err != nil {
