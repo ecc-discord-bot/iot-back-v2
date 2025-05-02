@@ -30,10 +30,19 @@ func AcceptTerms(claim middlewares.AccessTokenClaim,args AccepterTerms) error {
 		return errors.New("terms already accepted")
 	}
 
+	// ユーザーIDを更新
+	user.UserID = claim.UserID
+
 	// 同意済みにする
 	user.IsAgreed = true
+
+	// 名前を更新
 	user.Name = args.UserName
+
+	// クラスを更新
 	user.Class = args.Class
+
+	// 署名を更新
 	user.Signature = args.UserName
 
 	// ユーザーを更新する
