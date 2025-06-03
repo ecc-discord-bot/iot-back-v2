@@ -5,6 +5,10 @@ RUN apt update & apt install -y curl wget git
 
 WORKDIR /root/src
 
+RUN go install github.com/air-verse/air@latest
+
+CMD [ "air", "-c",".air.toml" ]
+
 # Build 
 FROM golang:1.24.1-bullseye as build
 
